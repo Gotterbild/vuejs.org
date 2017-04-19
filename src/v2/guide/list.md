@@ -230,7 +230,7 @@ However, this won't automatically pass any data to the component, because compon
   v-for="(item, index) in items"
   v-bind:item="item"
   v-bind:index="index"
-  v-bind:key="item.id">
+  v-bind:key="item.id"> <!--- Here closing '>' on the same line width last attribute -->
 </my-component>
 ```
 
@@ -252,7 +252,7 @@ Here's a complete example of a simple todo list:
       v-bind:key="todo"
       v-bind:title="todo"
       v-on:remove="todos.splice(index, 1)"
-    ></li>
+    ></li> <!--- And here it is on the next line after last attribute, with closing tag. Better to choose one styling than multiple. So, move '>' on this line to the previous line, at the end of attribute OR move '>' on line 233 to the next line for unified styling  -->
   </ul>
 </div>
 ```
